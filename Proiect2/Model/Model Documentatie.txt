@@ -1,0 +1,18 @@
+1. Am creeat solutia de Visual Studio
+2. Am creeat proiectul de Class Library .NET Framework
+3. In continuare pt creeare bazei de date voi folosi metoda Design First cu ADO.NET
+Astfel, creez urmatoarele entitati:
+	Photo -> Id, Name, Path, Place, Event, Persons(List(Person)), Properties(List(Properties)), CreatedAt
+	Person -> Id, Name
+	Property -> Id, Name, Value
+
+	Photo Property (Many to Many)
+	Photo Person( Many to Many)
+	
+4. Generez fisierul sql din acest model si il rulez. Baza de date a fost creeata. Am verificat in 
+Sql Server Management Studio creeare acesteia si este conform asteptarilor.
+
+5. Pot observa in Visual Studio ca au fost generate clasele conform modelului (Photo, Person, Property)
+
+6. Pentru proiectul 2 nu am facut nicio schimbare in model
+

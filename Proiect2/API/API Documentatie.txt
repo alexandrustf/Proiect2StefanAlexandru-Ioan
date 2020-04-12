@@ -1,0 +1,41 @@
+1. Dupa creearea modelului(clasele POCO)
+
+2. Ofer functionalitatile necesare aplicatiei in API, in API avem contextul prin care ne conectam la baza 
+de date
+
+3. Expun metoda(public) AddPhoto(cu toti parametrii necesari) care are rolul de a adauga o poza in Baza de date
+metoda verifica daca persoanele din poza exista deja in baza de date atunci acele entitati de Persoane vor fi
+adaugate in poza, daca nu exista vreo persoana in baza de date(verificarea se face dupa nume) va fi creeata
+o instanta noua a persoanei si introdusa atat in baza de date cat si in lista Persoanelor din poza. 
+Proprietatea va fi instatiata si adaugata in lista cu proprietati a pozei cat si in baza de date
+
+4. Expun metoda GetAllPhotos() care returneaza o colectie cu toate fotografiile din baza de date 
+
+5. Expun metoda public IEnumerable<Photo> GetFilteredPhotos(string property, string value)
+voi returna doar fotografiile care indeplinesc proprietatea
+
+6. Expun metoda public void AddCustomProperty(Guid photoId, string property, string value)
+	creez o proprietate noua cu numele si valoarea property si respectiv value
+	si o adaug la poza cu id-ul, astfel pot fi adaugate proprietatile in mod dinamic
+
+7. IEnumerable<string> GetAllPropoerties() - Pt afisarea tuturor proprietatilor prin care putem filtra, ne folosim de Reflection si aflam toate 
+proprietatile clasei Photo si mai adaugam si proprietatile Custom, returnam o lista
+de stringuri cu toate proprietatile prin care putem filtra
+
+7. Expun metoda void SendResultsToEmail(IEnumerable<string> ids,string email) - care va implementa un serviciu ce trimite prin email 
+rezultatul cautarii, cu ajutorul IEnumerable de string, voi lua toate id-urile si voi trimite pozele 
+asociate acelor id-uri.
+
+8. CheckIfPhotoDeleted, si voi returna un string prin care informez ca a fost stearsa poza cu id-ul
+si ii solicit utilizatorului sa confirme stergerea
+
+9. Photo GetPhotoDeleted() - va returna o poza stearsa din baza de date
+
+10. void ConfirmPhotoDeleted() - va confirma stergerea pozei si o va sterge din baza de date
+
+11. Pentru Proiectul 2 nu am facut nicio schimbare in API
+
+Subsemnatul Stefan-Alexandru-Ioan declar pe propria raspundere ca acest cod nu a fost copiat din Internet 
+sau din alte surse. Pentru documentare am folosit urmatoarele surse:
+	- https://profs.info.uaic.ro/~iasimin/
+

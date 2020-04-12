@@ -1,0 +1,35 @@
+1. Pentru inceput m-am gandit ca in partea stanga sa fie adaugarea pozei/video-ului
+2. Am introdus label si textBox pt fiecare camp
+3. Ultimul camp este pentru calea fisierului unde voi avea: un text box si un buton de Browse
+	https://www.c-sharpcorner.com/UploadFile/mahesh/openfiledialog-in-C-Sharp/ 
+	Aici am vazut un exemplu cum sa folosesc openFileDialog
+4. Putem selecta un fisier si ne va fi introdus in textBox calea fisierului
+5. Dupa ce am introdus informatiile necesare in toate campurile apasam pe butonul 'Adauga Photo/Video'. Se va face
+un call la API (metoda AddPhoto)si va inserat in baza de date imaginea si respectiv persoanele sau proprietatea.
+Campurile pot fi lasate si goale in cazul in care doreste utilizatorul 
+6. Daca poza fost adaugata cu succes, ne va aparea mesajul "Photo {numele pozei} added!" pe ecran
+7. Pentru proprietatea custom am adaugat label si textbox pentru id si proprietatea custom, trebuie sa
+adaugam un nume si valoarea proprietatii exemplu proprietate: vremea valoare: insorita
+8. APasam butonul "Add Custom Property" care va apela metoda AddCustomProperty din API si ni se va afisa mesajul "Property added!" 
+9. Am implementat un listView pentru vizualizarea pozelor din baza de date(putem vedea id si numele lor)
+Daca selectam una dintre imagini ne va fi afisata imaginea in partea dreapta
+Am implementat un PictureBox pentru vizualizarea imaginii
+10. Apasam pe butonul "See All Your Photos" pentru a ni se afisa in listview toate pozele din baza de date
+se apeleaza metoda GetAllPhotos din API care returneaza aceste imagini
+11. Pentru filtrare avem deasupra butonului "See Your Filtered Photos" campurile Property si Value.
+Pentru campul Property avem un select list, select list-ul este populat cu proprietatile unei imagini
+si de asemenea cu proprietatile custom. este apelata metoda GetAllProperties() pt a primi toate proprietatile
+posibile din aplicatie
+12. Alegem o proprietate si completam valoarea pe care o dorim in campul Value
+Apasam pe butonul "See All Your Photos" si primim doar fotografiile care au proprietatea
+cu valoarea ceruta de noi. Se apeleaza metoda GetFilteredPhotos din API.
+In listView putem observa ca ne-au aparut doar imaginile filtrate
+13. Pentru a trimite pe email rezultatele din list view, completam in textbox pt Email email-ul personal: si apasam 
+pe butonul "Send to my email" si se vor trimite rezultatele pe email-ul completat. Metoda apelata din APi este 
+SendResultsToEmail
+14. In partea de jos ne va apararea ca si warning daca o fotografie a fost stearsa. (Metoda apelata din API GetDeletedPhoto)
+Putem apasa butonul "Confirm deleted photo/video" pentru a confirma stergerea. Butonul apasat va apela metoda ConfirmPhotoDeleted
+
+Subsemnatul Stefan-Alexandru-Ioan declar pe propria raspundere ca acest cod nu a fost copiat din Internet 
+sau din alte surse. Pentru documentare am folosit urmatoarele surse:
+	- https://profs.info.uaic.ro/~iasimin/

@@ -1,0 +1,16 @@
+1. Am intrat in Developer Command Prompt for Visual Studio
+2. Am lansat host-ul in executie ruland proiectul MyPhotos.Host.WCF
+3. In cmd am scris comanda: svcutil http://localhost:8000/PC -out:proxy.cs –config:app.config
+care mi-a generat fisierele proxy.cs si app.config
+4. Am creeat un nou proiect de tip Windows Forms
+5. Aici am adaugat fisierul proxy.cs
+6. Am copiat o parte din codul de la GUI-ul din primul proiect si l-am updatat
+ca in loc sa apeleze api-ul direct sa foloseasca clasa MyPhotosWcfClient
+din fisierul proxy.cs
+7. Ruluam si acest proiect intr-o instanta diferita de Visual Studio si 
+testam toate functionalitatile si observam ca ele functioneaza
+
+Subsemnatul Stefan-Alexandru-Ioan declar pe propria raspundere ca acest cod nu a fost copiat din Internet 
+sau din alte surse. Pentru documentare am folosit urmatoarele surse:
+	- https://profs.info.uaic.ro/~iasimin/
+

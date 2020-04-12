@@ -1,0 +1,6 @@
+1. Am creeat un proiect de tipul App Console(.NET Framework) cu numele MyPhotos.Host.WCF
+2. Am adaugat referinta la proiectul MyPhotosWCF(ObjectWCF)
+3. Am adaugat referinte si la System.ServiceModel si System.ServiceModel.Description.
+4. Am creeat host-ul pt WCF in Main la portul 8000.
+5. Am configurat fisierul App.config
+6. Am adaugat si connection string-ul in App.config
